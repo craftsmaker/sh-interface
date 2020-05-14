@@ -5,6 +5,7 @@ export default StyleSheet.create({
 		flex: 1,
 		paddingTop: 25,
 		backgroundColor: "#F9FAFC",
-		padding: 20
+		padding: 20,
+		position: "relative"
 	}
 })

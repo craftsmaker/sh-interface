@@ -18,11 +18,10 @@ export default StyleSheet.create({
 	},
 	buttonSelection:{
 		flex: 1,
-		padding: 40,
+		padding: 10,
 	},
 	button:{
 		flex: 1,
-		
 		justifyContent: "center",
 		alignItems: "center",
 		backgroundColor: "#F4F5F7",
@@ -33,6 +32,10 @@ export default StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
 		
+	},
+	icon:{
+		color: "#FA7E54",
+		fontSize: 30
 	}
 	
 })
