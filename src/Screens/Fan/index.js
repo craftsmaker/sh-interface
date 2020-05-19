@@ -22,7 +22,7 @@ export default function Fan({navigation: {navigate}}) {
 	return(
 		<View style={globalStyles.container}>
 			<Text>Might</Text>
-			<View style={{flex: 2, flexDirection: "row"}}>
+			<View style={{flex: 1, flexDirection: "row"}}>
 				<View style={[styles.column,{justifyContent: "center",alignItems: "center"}]}>
 					<View>
 						<MaterialCommunityIcons name="fan" style={{position: "relative", right: 30, color: "#EAEBEE", fontSize: 50}}/>
@@ -33,14 +33,12 @@ export default function Fan({navigation: {navigate}}) {
 					</View>
 				</View>
 				<View style={[styles.column,{justifyContent: "center",alignItems: "center"}]}>
-					<View>
-						<Bar/>
-					</View>
+					<Bar/>
 				</View>
 			</View>
 			<View style={{flex:1,paddingBottom: 80}}>
 				<View style={styles.column}>
-					<View style={[styles.row, {paddingLeft: 15}]}>
+					<View style={[styles.row, {paddingLeft: 15, alignItems: "flex-end"}]}>
 						<Text>Direction</Text>
 						<Text>{direction}°</Text>
 					</View>
@@ -58,7 +56,7 @@ export default function Fan({navigation: {navigate}}) {
 					</View>
 				</View>
 				<View style={styles.column}>
-					<View style={[styles.row, {paddingLeft: 15}]}>
+					<View style={[styles.row, {paddingLeft: 15, alignItems: "flex-end"}]}>
 						<Text>Speed</Text>
 						<Text>{speed}</Text>
 					</View>
