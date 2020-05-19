@@ -4,7 +4,7 @@ This interface allow you to abstractly (because its just the UI)  control your h
 ## Installation
 
 Use that code
-```git clone https://github.com/craftsmaker/mega-hack-2.git```
+```git clone https://github.com/craftsmaker/sh-interface.git```
 Go in the frontend folder and use these commands
 ```
 yarn install
