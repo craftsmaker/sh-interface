@@ -1,4 +1,13 @@
-# Smart Home Interface
+<h4 align="center">
+    Smart Home Interface
+</h4>
+
+<p align="center>
+    <img src="https://img.shields.io/badge/license-MIT-orange"/>
+</p>
+
+<img src=".github/example.png" width="100%"/>
+
 This interface allow you to abstractly (because its just the UI)  control your house at your will.
 
 ## Installation

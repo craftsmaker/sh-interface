@@ -5,30 +5,36 @@ import { MaterialCommunityIcons} from '@expo/vector-icons';
 import globalStyles from "../../global";
 import styles from "./styles";
 
-export default function Fan({navigation: {navigate}}) {
-	const [speed,setSpeed] = useState(0);
-	const [direction,setDirection] = useState(45)
+export default function Fan({navigation,route: {params}}) {
 	const INITIAL_SPEED = 10;
 	const INITIAL_DIRECTION = 10;
 
-	const mocks = {
-		environmentTemperature: "34°c"
-	}
+	// console.log("Params from fan screen:",params)
+	// console.log("renders");
+
+	const [speed,setSpeed] = useState(INITIAL_SPEED);
+	const [direction,setDirection] = useState(INITIAL_DIRECTION);
+	const [temperature,setTemperature] = useState(params.environmentTemperature)
+	useEffect(() => {
+		let newEnvTemp = String(60 - speed) + "°c";
+		setTemperature(newEnvTemp);
+		navigation.setParams({environmentTemperature: newEnvTemp});
+	},[speed])
+	// console.log(speed);
 	return(
 		<View style={[globalStyles.container,{paddingTop: 80}]}>
-			<Text>Might</Text>
 			<View style={{flex: 1, flexDirection: "row"}}>
 				<View style={[styles.column,{justifyContent: "center",alignItems: "center"}]}>
 					<View>
 						<MaterialCommunityIcons name="fan" style={{position: "relative", right: 30, color: "#EAEBEE", fontSize: 50}}/>
 					</View>
 					<View>
-						<Text style={{fontSize: 60, fontWeight: "bold"}}>{mocks.environmentTemperature}</Text>
+						<Text style={{fontSize: 60, fontWeight: "bold"}}>{temperature}</Text>
 						<Text style={{color: "#9D9DA3",fontSize: 12}}>Temperature</Text>
 					</View>
 				</View>
 				<View style={[styles.column,{justifyContent: "center",alignItems: "center"}]}>
-					<Bar value={mocks.environmentTemperature}/>
+					<Bar value={temperature}/>
 				</View>
 			</View>
 			<View style={{flex:1,paddingBottom: 80}}>
