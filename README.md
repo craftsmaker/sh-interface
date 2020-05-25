@@ -6,7 +6,9 @@
     <img src="https://img.shields.io/badge/license-MIT-orange"/>
 </p>
 
-<img src=".github/example.png" width="100%"/>
+<h1 align="center">
+    <img src=".github/example.png" width="60%"/>
+</h1>
 
 This interface allow you to abstractly (because its just the UI)  control your house at your will.
 

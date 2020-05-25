@@ -14,7 +14,7 @@ export default function Routes() {
 				<Screen name="Home" component={Home} initialParams={{environmentTemperature: "36°c"}}/>
 				<Screen name="Fan" component={Fan} options={({route,navigation:{navigate}}) => (
 					{
-						headerLeft: ({onPress,navigation}) => (
+						headerLeft: () => (
 							<TouchableOpacity onPress={() => navigate("Home", route?.params)} style={{paddingLeft:10}}>
 								<AntDesign name="arrowleft" size={30} />
 							</TouchableOpacity>

@@ -3,25 +3,10 @@ import {View,Text,Animated} from "react-native";
 import {Svg,Rect} from "react-native-svg";
 const AnimatedRect = Animated.createAnimatedComponent(Rect);
 
-export default function Bar({value}){
+export default function Bar({value,cb}){
 	const [barSizeAnimated,setSizeAnimated] = useState(new Animated.Value(0));
 	
-	// value as being a teoretical environment temperature
-	useEffect(() => {
-		const MAX_VALUE = 60;
-		let newBarSize = parseInt(value) / MAX_VALUE;
-		// console.log(newBarSize.toFixed(2)," vs ", barSizeAnimated)
-		handleBarSize(parseFloat(newBarSize.toFixed(2)));
-	
-	},[value])
-	
-
-	const handleBarSize = (value) => {
-		Animated.spring(barSizeAnimated, {
-			toValue: value,
-			useNativeDriver: true
-		}).start()
-	}
+	cb(barSizeAnimated);
 
 	return(
 		<View style={{flex:1,backgroundColor: "#ECEDEF", borderRadius: 10,overflow: "hidden", position: "relative", alignItems: "center"}} >
