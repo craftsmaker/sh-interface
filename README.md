@@ -7,7 +7,7 @@
 </p>
 
 <h1 align="center">
-    <img src=".github/example.png" width="60%"/>
+    <img src=".github/example.png" width="50%"/>
 </h1>
 
 This interface allow you to abstractly (because its just the UI)  control your house at your will.
