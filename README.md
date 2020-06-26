@@ -6,6 +6,8 @@
     <img src="https://img.shields.io/badge/license-MIT-orange"/>
 </p>
 
+[Design - Shourav](https://dribbble.com/shots/4585243-Smart-Home-App-Ui/attachments/1036679)
+
 <h1 align="center">
     <img src=".github/example.png" width="50%"/>
 </h1>
